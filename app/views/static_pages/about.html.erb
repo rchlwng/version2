@@ -1,2 +1,10 @@
-<h1>StaticPages#about</h1>
-<p>Find me in app/views/static_pages/about.html.erb</p>
+<%= render 'layouts/navbar' %>
+<div id="about" class="body">
+    <div id="headline">
+        <h1 class="fittext">HELLO THERE.</h1>
+        <h3>A BIT ABOUT ME —</h3>
+    </div>
+</div>
+<script>
+    document.addEventListener("turbolinks:load", jQuery(".fittext").fitText())
+</script>

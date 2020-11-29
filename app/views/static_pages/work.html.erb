@@ -1,2 +1,9 @@
-<h1>StaticPages#work</h1>
-<p>Find me in app/views/static_pages/work.html.erb</p>
+<%= render 'layouts/navbar' %>
+<div id="work" class="body">
+    <div id="headline">
+        <h1 class="fittext">WORK.</h1>
+    </div>
+</div>
+<script>
+    document.addEventListener("turbolinks:load", jQuery(".fittext").fitText())
+</script>

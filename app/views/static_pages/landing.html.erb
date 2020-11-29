@@ -1,2 +1,18 @@
-<h1>PEEPEEPOOPOO</h1>
-<p>Find me in app/views/static_pages/landing.html.erb</p>
+<% provide(:title, "HOME") %>
+<div id="landing">
+    <div id="topsection">
+        <h3 id="designerdeveloper">DESIGNER // DEVELOPER</h3>
+        <div id="imagecaption">
+            <h4 id="artdirection">ART DIRECTION // FASHION</h4>
+            <%= image_tag("rach.png", alt: "rachie", id: "rachie", class: "img-fluid") %>
+            <div id="losangeles" class="caption">LOS ANGELES, CA</div>
+        </div>
+    </div>
+    <div id="bottomsection" class="p-5">
+    <h1 id="title" class="fittext">RACHEL WANG</h1>
+    <%= render 'layouts/homenav' %>
+    </div>
+</div>
+<script>
+    document.addEventListener("turbolinks:load", jQuery(".fittext").fitText())
+</script>

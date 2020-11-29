@@ -1,4 +1,4 @@
-class ContactFormController < ApplicationController
+class ContactController < ApplicationController
   def new
     @contact_form = ContactForm.new
   end
@@ -8,9 +8,16 @@ class ContactFormController < ApplicationController
       @contact_form = ContactForm.new(params[:contact_form])
       @contact_form.request = request
       if @contact_form.deliver
-        flash.now[:notice] = 'Thanks for reaching out!'
+        @contact_form = ContactForm.new
+        format.html {
+          flash.now[:success] = @message = "Thanks for reaching out!"
+          render 'new'
+        }
       else
-        render :new
+        format.html {
+           flash.now[:error] = @message = "Message did not send."
+           render 'new' 
+        }
       end
     rescue ScriptError
       flash[:error] = 'Sorry, this message appears to be spam and was not delivered.'

@@ -1,0 +1,29 @@
+<%= render 'layouts/navbar' %>
+<div id="contact" class="body">
+    <div id="headline">
+        <h1 class="fittext">DROP IN, SAY HI.</h1>
+        <h3>SEND ME MAIL —</h3>
+    </div>
+    <div id="form">
+        <%= form_for @contact_form, url: contact_path do |f| %>
+            <div class="container" id="contactform">
+                <%= f.label :name %></br>
+                <%= f.text_field  :name, required: true, class: "contact-form-text-area" %></br>
+        
+                <%= f.label :email %></br>
+                <%= f.text_field :email, required: true, class: "contact-form-text-area" %></br>
+        
+                <%= f.label :message %></br>
+                <%= f.text_area :message, rows: 5, cols: 40, required: true, class: "contact-form-text-area" %></br>
+                <%= hidden_field_tag 'nickname', 'none'  %>
+            <%= f.submit 'Submit', class: 'btn px-4 my-3' %>
+            <div class="pt-3" id="flash-message">
+                <%= render 'layouts/flash' %>
+            </div>
+            </div>
+        <% end %>
+    </div>
+</div>
+<script>
+    document.addEventListener("turbolinks:load", jQuery(".fittext").fitText())
+</script>

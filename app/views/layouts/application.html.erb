@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Rachie</title>
+    <title><%= yield(:title) %> | RACHEL WANG</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+    <%= javascript_pack_tag 'jqueryfittext' %>
 
+    <%= render 'layouts/shim' %>
+
+    <%= favicon_link_tag asset_path('favicon.ico') %>
+</head>
   <body>
     <%= yield %>
   </body>
