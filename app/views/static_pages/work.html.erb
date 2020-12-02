@@ -1,9 +1,126 @@
+<% provide(:title, "WORK") %>
 <%= render 'layouts/navbar' %>
 <div id="work" class="body">
-    <div id="headline">
-        <h1 class="fittext">WORK.</h1>
+    <div id="topsection">
+        <div id="headline">
+            <h1 class="fittext">WORK.</h1>
+        </div>
+        <div id="categories" class="d-flex justify-content-between">
+            <button id="all" class="category">ALL</button>
+            <button id="branding" class="category">BRANDING</button>
+            <button id="web" class="category">WEB</button>
+            <button id="visual" class="category">VISUAL</button>
+        </div>
+    </div>
+    <div id="bottomsection">
+        <div class="work row branding">
+            <div class="col-4 description">
+                <h2>FORTUNATE: SPECULATIVE FASHION BRAND</h2>
+                <h3>Branding Design</h3>
+                <p>Original women's clothing brand concept emulating my own personal aesthetic.</p>
+            </div>
+            <div class="col-8">
+                <%= link_to image_tag("work/fortunate/shoppingbag.png", alt: "logo", id: "fortunate"), root_path, id: "logo" %>
+            </div>
+        </div>
+        <div class="work row web">
+            <div class="col-4 description">
+                <h2>USC MASH Magazine</h2>
+                <h3>Web Design</h3>
+                <p>Web design and development for USC MASH Magazine, a publication investigating the intersection of business and fashion.</p>
+            </div>
+            <div class="col-8">
+                <%= link_to image_tag("work/mash/thumbnail.png", alt: "logo", id: "mash", class: "img-fluid"), root_path, id: "logo" %>
+            </div>
+        </div>
+        <div class="work row branding">
+            <div class="col-4 description">
+                <h2>FULL STOP: SPECULATIVE FASHION BRAND</h2>
+                <h3>Branding Design</h3>
+                <p>In-depth case study on the Gen Z fashion consumer; resulting brand concept and female / nonbinary clothing collection.</p>
+            </div>
+            <div class="col-8">
+                <%= link_to image_tag("work/fsf/thumbnail.png", alt: "logo", id: "fsf", class: "img-fluid"), root_path, id: "logo" %>
+            </div>
+        </div>
+        <div class="work row visual">
+            <div class="col-4 description">
+                <h2>Bodo's Bagels Menu</h2>
+                <h3>Visual Design</h3>
+                <p>Menu layout revamp for Bodo's Bagels, a traditional New York style bagel shop. The new menu features modern and new-age design moves.</p>
+            </div>
+            <div class="col-8">
+                <%= link_to image_tag("work/fortunate/shoppingbag.png", alt: "logo", id: "fortunate", class: "img-fluid"), root_path, id: "logo" %>
+            </div>
+        </div>
+        <div class="work row web">
+            <div class="col-4 description">
+                <h2>Scope USC</h2>
+                <h3>Web Design</h3>
+                <p>Web design and development for Scope USC, a campus community for developers and avid builders.</p>
+            </div>
+            <div class="col-8">
+                <%= link_to image_tag("work/fortunate/shoppingbag.png", alt: "logo", id: "fortunate", class: "img-fluid"), root_path, id: "logo" %>
+            </div>
+        </div>
+        <div class="work row branding">
+            <div class="col-4 description">
+                <h2>Christian Lacroix Rebrand</h2>
+                <h3>Branding Design</h3>
+                <p>Luxury designer and company Christian Lacroix examined in a case study with an accompanying modern rebrand.</p>
+            </div>
+            <div class="col-8">
+                <%= link_to image_tag("work/lacroix/thumbnail.png", alt: "logo", id: "lacroix", class: "img-fluid"), root_path, id: "logo" %>
+            </div>
+        </div>
+        <div class="work row visual">
+            <div class="col-4 description">
+                <h2>Key Art Poster</h2>
+                <h3>Visual Design</h3>
+                <p>In-depth case study on the Gen Z fashion consumer; resulting brand concept and female / nonbinary clothing collection.</p>
+            </div>
+            <div class="col-8">
+                <%= link_to image_tag("work/fortunate/shoppingbag.png", alt: "logo", id: "fortunate", class: "img-fluid"), root_path, id: "logo" %>
+            </div>
+        </div>
+        <div class="work row visual">
+            <div class="col-4 description">
+                <h2>Side Hustles</h2>
+                <h3>Visual Design</h3>
+                <p>A casual collection of my hobby creations; designs that occupy my spare time and range from fashion to fine art and more.</p>
+            </div>
+            <div class="col-8">
+                <%= link_to image_tag("work/fortunate/shoppingbag.png", alt: "logo", id: "fortunate", class: "img-fluid"), root_path, id: "logo" %>
+            </div>
+        </div>
     </div>
 </div>
 <script>
     document.addEventListener("turbolinks:load", jQuery(".fittext").fitText())
+
+    document.addEventListener("turbolinks:load", () => {
+    const allButton = document.getElementById("all");
+    allButton.addEventListener('click', (event) => {
+        $(".work").show()
+        $("#bottomsection").scrollTop(0)
+    });
+    const brandingButton = document.getElementById("branding");
+    brandingButton.addEventListener('click', (event) => {
+        $(".branding").show()
+        $(".work:not(.branding)").hide()
+        $("#bottomsection").scrollTop(0)
+    });
+    const webButton = document.getElementById("web");
+    webButton.addEventListener('click', (event) => {
+        $(".web").show()
+        $(".work:not(.web)").hide()
+        $("#bottomsection").scrollTop(0)
+    });
+    const visualButton = document.getElementById("visual");
+    visualButton.addEventListener('click', (event) => {
+        $(".visual").show()
+        $(".work:not(.visual)").hide()
+        $("#bottomsection").scrollTop(0)
+    });
+});
 </script>

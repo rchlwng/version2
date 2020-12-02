@@ -1,8 +1,20 @@
+<% provide(:title, "ABOUT") %>
 <%= render 'layouts/navbar' %>
 <div id="about" class="body">
     <div id="headline">
         <h1 class="fittext">HELLO THERE.</h1>
         <h3>A BIT ABOUT ME —</h3>
+    </div>
+    <div id="aboutbody" class="row">
+        <div class="col-sm-7">
+        <%= image_tag("rachonfilm.png", alt: "rachie", id: "rachie", class: "img-fluid") %>
+        </div>
+        <div class="col-sm-5">
+            <h2>I’m Rachel, a Los Angeles-based designer specializing in web, branding, and product.
+            </h2>
+            <h4>As the child of two immigrants, I like to bring an approach of hybridity my work. Synthesizing east and west, detail and refinement, ambition and class, and technology and art, the visual stories I tell are framed with empathy.</h4>
+            <h4>The website that you’re currently visiting was my quarantine project — a piece of digital media that I designed and developed to represent myself. </h4>
+        </div>
     </div>
 </div>
 <script>

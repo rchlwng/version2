@@ -1,22 +1,26 @@
+<% provide(:title, "CONTACT") %>
 <%= render 'layouts/navbar' %>
 <div id="contact" class="body">
     <div id="headline">
         <h1 class="fittext">DROP IN, SAY HI.</h1>
         <h3>SEND ME MAIL —</h3>
     </div>
+    <div id="socials">
+    <%= link_to image_tag("socials/instagram.png", alt: "instagram", id: "instagram"), "https://www.instagram.com/rachiebabywang/", target: :_blank, id: "logo", class: "navbar-brand" %>
+    <%= link_to image_tag("socials/github.png", alt: "github", id: "github"), "https://github.com/rchlwng", target: :_blank, id: "logo", class: "navbar-brand" %>
+    <%= link_to image_tag("socials/spotify.png", alt: "spotify", id: "spotify"), "https://open.spotify.com/user/1211390516?si=sUhgaPrLSu6hjImBmTSfNg", target: :_blank, id: "logo", class: "navbar-brand" %>
+    <%= link_to image_tag("socials/linkedin.png", alt: "linkedin", id: "linkedin"), "https://www.linkedin.com/in/rchlwang/", target: :_blank, id: "logo", class: "navbar-brand" %>
+    </div>
     <div id="form">
         <%= form_for @contact_form, url: contact_path do |f| %>
             <div class="container" id="contactform">
-                <%= f.label :name %></br>
                 <%= f.text_field  :name, required: true, class: "contact-form-text-area" %></br>
-        
-                <%= f.label :email %></br>
+    
                 <%= f.text_field :email, required: true, class: "contact-form-text-area" %></br>
-        
-                <%= f.label :message %></br>
-                <%= f.text_area :message, rows: 5, cols: 40, required: true, class: "contact-form-text-area" %></br>
+    
+                <%= f.text_area :message, rows: 4, cols: 40, required: true, class: "contact-form-text-area" %></br>
                 <%= hidden_field_tag 'nickname', 'none'  %>
-            <%= f.submit 'Submit', class: 'btn px-4 my-3' %>
+            <%= f.submit 'SEND' %>
             <div class="pt-3" id="flash-message">
                 <%= render 'layouts/flash' %>
             </div>

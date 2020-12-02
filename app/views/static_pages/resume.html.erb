@@ -1,3 +1,90 @@
+<% provide(:title, "RESUME") %>
 <%= render 'layouts/navbar' %>
 <div id="resume" class="body">
+    <div class="row">
+        <div id="leftcol" class="col-md-6">
+            <div id="experience" class="p-3">
+                <h2>EXPERIENCE</h2>
+                <div id="experiencecontent" class="pr-5">
+                <div class="experiences">
+                    <h5>Survei / <span class="role">Product Design Intern</span></h5>
+                    <p>Working with the UI / UX team to create an admin dashboard for
+                    Survei, a real estate web app. Creation of user flows, wireframes,
+                    and design concepts.</p>
+                </div>
+                <div class="experiences">
+                    <h5>STEM to the Future / <span class="role">Web Designer + Developer</span></h5>
+                    <p>Web design and development for STEM to the Future (RoR), a nonprofit
+                    providing STEM opportunities to minority K12
+                    students.</p>
+                </div>
+                <div class="experiences">
+                    <h5>Innovative Design / <span class="role">Visual Designer</span></h5>
+                    <p>Reviewing clients’ existing brand identity, and working with a design team in an agency environment to
+                    create branding assets for various USC organizations.</p>
+                </div>
+                <div class="experiences">
+                    <h5>MASH Magazine / <span class="role">Web Design Chair</span></h5>
+                    <p>Web design and development for MASH (React.js), an online publication highlighting the intersection of fashion and business with a focus on sustainability, diversity, and design.</p>
+                </div>
+                </div>
+            </div>
+            <div id="siteportfolio" class="p-3">
+                <h2>SITE SAMPLES</h2>
+                <h5>Designed and developed by yours truly.</h5>
+                <%= link_to "MASH Magazine", "https://uscmashmag.com/", class: "", target: :_blank %><br />
+                <%= link_to "Scope USC", "https://scopeusc.com/", class: "", target: :_blank %><br />
+                <%= link_to "STEM to the Future", "https://www.stemtothefuture.org/", class: "", target: :_blank %>
+            </div>
+        </div>
+        <div id="rightcol" class="col-md-6">
+            <div id="tools" class="p-3">
+                <h2>TOOLS</h2>
+                <div class="row">
+                    <div class="col">
+                        <h5>TECHNOLOGY</h5>
+                        <ul>
+                            <li>Figma</li>
+                            <li>Adobe Creative Suite</li>
+                            <li>Adobe XD</li>
+                            <li>Procreate</li>
+                            <li>Git + Command Line</li>
+                            <li>Firebase</li>
+                            <li>Heroku</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h5>LANGUAGES</h5>
+                        <ul>
+                            <li>HTML / CSS / JS</li>
+                            <li>Ruby on Rails</li>
+                            <li>Swift</li>
+                            <li>React.js</li>
+                            <li>C++</li>
+                            <li>Java</li>
+                            <li>SQL</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h5>SKILLS</h5>
+                        <ul>
+                            <li>Web Development</li>
+                            <li>Visual Design</li>
+                            <li>Branding</li>
+                            <li>Product Design</li>
+                            <li>Object-Oriented Programming</li>
+                            <li>iOS App Development</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="education" class="p-3">
+                <h2>EDUCATION</h2>
+                <h3>UNIVERSITY OF SOUTHERN CALIFORNIA</h3>
+                <h4>DESIGN BFA</h4>
+                <h4>GPA</h4>
+                <h4 class="font-italic">Concentrations in Computer Science and Communications</h4>
+            </div>
+        </div>
+    </div>
 </div>

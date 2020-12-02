@@ -4,6 +4,9 @@
 
 // CUSTOM VARIABLES
 $darkmode: #0D0D0D;
+$darkgray: #333333;
+$gray: #828282;
+
 
 html {
     height: 100%;
@@ -16,10 +19,13 @@ body {
 .body {
     padding: 2rem;
     padding-left: 4rem;
+    padding-bottom: 0;
+    padding-right: 0;
 }
 
 // NAV STYLES
 #nav {
+    height: 12vh;
     #mainnav {
         .nav-link, .nav-item {
             font-family: 'Archivo Narrow', sans-serif;
@@ -30,6 +36,10 @@ body {
         }
         padding: 2rem;
     }
+    .navbar-toggler {
+        border: none;
+    }
+    background-color: white;
 }
 
 #headline {
@@ -49,16 +59,225 @@ body {
     }
 }
 
+// WORK STYLES
+#work {
+    #topsection {
+        height: 18vw;
+        background-color: white;
+        width: 100%;
+        #categories {
+            width: 65vw;
+        }
+        .category {
+            background: none;
+            border: none;
+            font-family: 'Archivo Narrow', sans-serif;
+            color: $darkmode;
+            font-size: 2vw;
+            text-align: left;
+        }
+    }
+    #bottomsection {
+        scroll-snap-type: y mandatory;
+        scroll-snap-stop: always;
+        padding-top: 2vw;
+        width: 100%;
+        height: 68vh;
+        top: 35vh;
+        overflow: auto;
+        z-index: -2;
+        .work {
+            scroll-snap-align: start;
+            height: 70vh;
+            .description {
+                font-family: 'Archivo Narrow', sans-serif;
+                color: $darkmode;
+                padding-top: 2rem;
+                h2 {
+                    font-size: 2.5vw;
+                }
+                h3 {
+                    font-size: 2vw;
+                    color: $gray;
+                    font-style: italic;
+                }
+                p {
+                    font-size: 1.2vw;
+                    color: $darkgray;
+                }
+            }
+            img {
+                height: 64vh;
+                width: 63vw;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
 // ABOUT STYLES
+#about {
+    padding-right: 4rem;
+    #aboutbody {
+        font-family: 'Archivo Narrow', sans-serif;
+        color: $darkmode;
+        padding-top: 4vh;
+        h2 {
+            font-size: 3vw;
+        }
+        h4 {
+            padding-top: 2vw;
+            color: $gray;
+            font-size: 2vw;
+        }
+    }
+}
+
+// RESUME STYLES
+#resume {
+    h2 {
+        font-family: 'Yeseva One', cursive;
+        color: $darkmode;
+        font-size: 5.5vw;
+    }
+    #experience, #education {
+        h2 {
+            -webkit-text-fill-color: white;
+            -webkit-text-stroke-width: .15vw;
+            -webkit-text-stroke-color: $darkmode;
+        }
+    }
+    #experience {
+        #experiencecontent {
+            h5 {
+                font-family: 'Yeseva One', cursive;
+                font-size: 1.2vw;
+            }
+            p {
+                font-family: 'Archivo Narrow', sans-serif;
+                font-size: 1vw;
+            }
+            .role {
+                color: $gray;
+            }
+        }
+    }
+    #siteportfolio {
+        h5 {
+            font-family: 'Archivo Narrow', sans-serif;
+            text-transform: uppercase;
+            color: $darkgray;
+            font-size: 1.5vw;
+        }
+        a {
+            font-family: 'Archivo Narrow', sans-serif;
+            text-transform: uppercase;
+            color: $gray;
+            font-size: 1.5vw;
+        }
+    }
+    #tools {
+        h5 {
+            font-family: 'Archivo Narrow', sans-serif;
+            text-transform: uppercase;
+            color: $darkgray;
+            font-size: 2vw;
+        }
+        ul {
+            font-family: 'Archivo Narrow', sans-serif;
+            font-size: 1.5vw;
+            list-style-type: none;
+            padding-left: 0;
+            color: $gray;
+            li {
+                padding-top: .5rem;
+            }
+        }
+    }
+    #education {
+        h3 {
+            font-family: 'Archivo Narrow', sans-serif;
+            text-transform: uppercase;
+            color: $darkgray;
+            font-size: 2vw;
+        }
+        h4 {
+            font-family: 'Archivo Narrow', sans-serif;
+            color: $gray;
+            font-size: 1.5vw;
+        }
+    }
+}
+
+// CONTACT STYLES
+#contact {
+    #headline {
+        padding-bottom: 4vw;
+    }
+    #socials {
+        height: 45vh;
+        position: absolute;
+        #instagram {
+            width: 12vw;
+        }
+        #github {
+            width: 9vw;
+            position: absolute;
+            bottom: 5vh;
+            left: 8vw;
+        }
+        #spotify {
+            width: 9vw;
+            position: absolute;
+            bottom: 24vh;
+            left: 20vw;
+        }
+        #linkedin {
+            width: 7vw;
+            position: absolute;
+            bottom: 12vh;
+            left: 32vw;
+        }
+        img {
+            height: auto;
+        }
+    }
+    #form {
+        font-family: 'Archivo Narrow', sans-serif;
+        text-transform: uppercase;
+        color: $darkmode;
+        height: 45vh;
+        right: 4rem;
+        position: absolute;
+        text-align: right;
+        .contact-form-text-area {
+            padding-top: 1rem;
+            padding-bottom: .5rem;
+            font-size: 3.2vh;
+            width: 40vw;
+            border: none;
+            border-bottom: 3px solid $darkmode;
+            &:focus {
+                outline: none;
+            }
+        }
+        input[type=submit] {
+            background: none;
+            border: none;
+            font-size: 4vh;
+        }
+    }
+}
 
 // LANDING STYLES
 #landing {
+    height: 100%;
     padding: 3vw;
     padding-top: 2vw;
+    padding-bottom: 0;
     #title {
         font-family: 'Yeseva One', cursive;
     }
-
     #homenav {
         width: 100%;
         font-family: 'Archivo Narrow', sans-serif;
@@ -72,7 +291,6 @@ body {
         margin: 0;
         padding: 0;
     }
-
     #topsection {
         font-family: 'Archivo Narrow', sans-serif;
         text-transform: uppercase;
@@ -80,7 +298,7 @@ body {
             text-align: right;
             vertical-align: top;
             #rachie {
-                width: 18%;
+                width: 25%;
                 height: auto;
                 padding: 1rem;
                 padding-right: 0;
@@ -95,16 +313,14 @@ body {
         #designerdeveloper {
             position: absolute;
             top: 8vw;
-            right: 19vw;
+            right: 25vw;
             font-size: 2.5vw;
         }
     
     }
-
     #bottomsection {
         position: absolute;
-        bottom: 1.5rem;
+        bottom: 2vh;
         width: 100%;
-        padding-bottom: 0;
     }
 }

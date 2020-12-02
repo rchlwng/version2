@@ -9,6 +9,8 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'jqueryfittext' %>
 
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+
     <%= render 'layouts/shim' %>
 
     <%= favicon_link_tag asset_path('favicon.ico') %>
@@ -16,4 +18,10 @@
   <body>
     <%= yield %>
   </body>
+  <script>
+      function addDarkmodeWidget() {
+        new Darkmode().showWidget();
+      }
+      document.addEventListener("turbolinks:load", addDarkmodeWidget)
+</script>
 </html>
