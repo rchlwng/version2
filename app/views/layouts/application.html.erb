@@ -9,7 +9,6 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'jqueryfittext' %>
 
-    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
 
     <%= render 'layouts/shim' %>
 
@@ -18,15 +17,5 @@
   <body>
     <%= yield %>
   </body>
-  <script>
-      function addDarkmodeWidget() {
-
-        const options = {
-          autoMatchOsTheme: false 
-        }
-
-        new Darkmode().showWidget(options);
-      }
-      document.addEventListener("turbolinks:load", addDarkmodeWidget)
-</script>
+ 
 </html>

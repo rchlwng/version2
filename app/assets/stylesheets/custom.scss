@@ -336,6 +336,40 @@ body {
     }
 }
 
+// darkmode styles
+.darkmode--activated {
+    body {
+        background-color: $darkmode;
+    }
+    background-color: $darkmode;
+    #nav {
+        background-color: $darkmode;
+        #mainnav .nav-link, #mainnav .nav-item {
+            color: white;
+        }
+        .navbar-toggler {
+            border: none;
+        }
+    }
+    #landing {
+        #title {
+            color: white;
+        }
+        #homenav .nav-item, #homenav .nav-link {
+            color: white;
+        }
+        #designerdeveloper {
+            color: white;
+        }
+    }
+    #contact {
+        #form .contact-form-text-area {
+            background-color: $darkmode;
+            border-color: white;
+        }
+    }
+}
+
 // MOBILE STYLES
 @media screen and (max-width: 992px) {
     .fittext {

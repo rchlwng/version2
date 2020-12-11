@@ -10,6 +10,7 @@ gem 'turbolinks', '5.2.1'
 gem 'jbuilder',   '2.10.0'
 gem 'bootsnap',   '1.4.6', require: false
 gem 'mailgun-ruby', '~>1.1.6'
+gem 'dotenv-rails', groups: [:development, :test]
 
 group :development, :test do
   gem 'mailcatcher'
