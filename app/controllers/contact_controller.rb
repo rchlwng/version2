@@ -1,26 +1,22 @@
 class ContactController < ApplicationController
-  def new
-    @contact_form = ContactForm.new
-  end
-
-  def create
-    begin
-      @contact_form = ContactForm.new(params[:contact_form])
-      @contact_form.request = request
-      if @contact_form.deliver
-        @contact_form = ContactForm.new
-        format.html {
-          flash.now[:success] = @message = "Thanks for reaching out!"
-          render 'new'
-        }
-      else
-        format.html {
-           flash.now[:error] = @message = "Message did not send."
-           render 'new' 
-        }
-      end
-    rescue ScriptError
-      flash[:error] = 'Sorry, this message appears to be spam and was not delivered.'
+    def new
+      @contact = Contact.new
     end
-  end
+  
+    def create
+      @contact = Contact.new contact_params
+      if @contact.valid?
+        ContactMailer.with(contact: @contact).new.deliver_now
+        redirect_to new_contact_url
+        flash[:notice] = "Thanks for contacting"
+      else
+        flash[:notice] = "Sorry, there was an error.  Please try again"
+        render :new
+      end
+    end
+  
+  private
+    def contact_params
+      params.require(:contact).permit(:name, :email, :message)
+    end
 end

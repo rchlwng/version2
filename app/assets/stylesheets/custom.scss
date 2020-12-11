@@ -23,6 +23,11 @@ body {
     padding-right: 0;
 }
 
+.fittext {
+    width: 100%;
+    font-size: 12vw;
+}
+
 // NAV STYLES
 #nav {
     height: 12vh;
@@ -46,6 +51,8 @@ body {
     h1 {
         font-family: 'Yeseva One', cursive;
         color: $darkmode;
+        font-size: 5vw;
+        width: 70vw;
         -webkit-text-fill-color: white;
         -webkit-text-stroke-width: 3px;
         -webkit-text-stroke-color: $darkmode;
@@ -54,26 +61,29 @@ body {
         font-family: 'Archivo Narrow', sans-serif;
         text-transform: uppercase;
         color: $darkmode;
-        font-size: 4vw;
+        font-size: 2vw;
         padding-left: 50vw;
     }
 }
 
 // WORK STYLES
 #work {
+    .fittext {
+        margin: 0;
+    }
     #topsection {
-        height: 18vw;
+        height: 23vh;
         background-color: white;
         width: 100%;
         #categories {
-            width: 65vw;
+            width: 50vw;
         }
         .category {
             background: none;
             border: none;
             font-family: 'Archivo Narrow', sans-serif;
             color: $darkmode;
-            font-size: 2vw;
+            font-size: 1.8vw;
             text-align: left;
         }
     }
@@ -82,13 +92,13 @@ body {
         scroll-snap-stop: always;
         padding-top: 2vw;
         width: 100%;
-        height: 68vh;
+        height: 61vh;
         top: 35vh;
         overflow: auto;
         z-index: -2;
         .work {
             scroll-snap-align: start;
-            height: 70vh;
+            height: 61vh;
             .description {
                 font-family: 'Archivo Narrow', sans-serif;
                 color: $darkmode;
@@ -107,7 +117,7 @@ body {
                 }
             }
             img {
-                height: 64vh;
+                height: 62vh;
                 width: 63vw;
                 object-fit: cover;
             }
@@ -117,7 +127,7 @@ body {
 
 // ABOUT STYLES
 #about {
-    padding-right: 4rem;
+    padding: 4rem;
     #aboutbody {
         font-family: 'Archivo Narrow', sans-serif;
         color: $darkmode;
@@ -128,8 +138,9 @@ body {
         h4 {
             padding-top: 2vw;
             color: $gray;
-            font-size: 2vw;
+            font-size: 1.5vw;
         }
+        
     }
 }
 
@@ -138,7 +149,7 @@ body {
     h2 {
         font-family: 'Yeseva One', cursive;
         color: $darkmode;
-        font-size: 5.5vw;
+        font-size: 4vw;
     }
     #experience, #education {
         h2 {
@@ -167,13 +178,13 @@ body {
             font-family: 'Archivo Narrow', sans-serif;
             text-transform: uppercase;
             color: $darkgray;
-            font-size: 1.5vw;
+            font-size: 1.2vw;
         }
         a {
             font-family: 'Archivo Narrow', sans-serif;
             text-transform: uppercase;
             color: $gray;
-            font-size: 1.5vw;
+            font-size: 1.2vw;
         }
     }
     #tools {
@@ -181,11 +192,11 @@ body {
             font-family: 'Archivo Narrow', sans-serif;
             text-transform: uppercase;
             color: $darkgray;
-            font-size: 2vw;
+            font-size: 1.5vw;
         }
         ul {
             font-family: 'Archivo Narrow', sans-serif;
-            font-size: 1.5vw;
+            font-size: 1.2vw;
             list-style-type: none;
             padding-left: 0;
             color: $gray;
@@ -216,15 +227,15 @@ body {
     }
     #socials {
         height: 45vh;
-        position: absolute;
+        position: relative;
         #instagram {
             width: 12vw;
         }
         #github {
             width: 9vw;
             position: absolute;
-            bottom: 5vh;
-            left: 8vw;
+            bottom: 6vh;
+            left: 11vw;
         }
         #spotify {
             width: 9vw;
@@ -247,9 +258,6 @@ body {
         text-transform: uppercase;
         color: $darkmode;
         height: 45vh;
-        right: 4rem;
-        position: absolute;
-        text-align: right;
         .contact-form-text-area {
             padding-top: 1rem;
             padding-bottom: .5rem;
@@ -260,6 +268,9 @@ body {
             &:focus {
                 outline: none;
             }
+        }
+        .alert {
+            padding-left: 0;
         }
         input[type=submit] {
             background: none;
@@ -298,7 +309,7 @@ body {
             text-align: right;
             vertical-align: top;
             #rachie {
-                width: 25%;
+                width: 20vw;
                 height: auto;
                 padding: 1rem;
                 padding-right: 0;
@@ -313,7 +324,7 @@ body {
         #designerdeveloper {
             position: absolute;
             top: 8vw;
-            right: 25vw;
+            right: 23vw;
             font-size: 2.5vw;
         }
     
@@ -322,5 +333,228 @@ body {
         position: absolute;
         bottom: 2vh;
         width: 100%;
+    }
+}
+
+// MOBILE STYLES
+@media screen and (max-width: 992px) {
+    .fittext {
+        font-size: 18vw;
+    }
+    #nav {
+        #mainnav {
+            padding: 0;
+            padding-top: 2vh;
+            padding-right: 1vh;
+            text-align: right;
+            .nav-link, .nav-item {
+                font-size: 2vh;
+            }
+        }
+        height: auto;
+    }
+    #headline {
+        padding-top: 3vh;
+        h1 {
+            font-size: 5vw;
+            width: 100vw;
+        }
+        h3 {
+            font-size: 3vh;
+            padding-left: 30vw;
+        }
+    }
+    #landing {
+        #homenav {
+            width: 100%;
+            font-family: 'Archivo Narrow', sans-serif;
+            text-transform: uppercase;
+            font-size: 2.5vh;
+            .nav-item, .nav-link {
+                padding: 0;
+                color: $darkmode;
+                padding-right: 6vw;
+            }
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        #topsection {
+            #imagecaption {
+                #rachie {
+                    width: 50vw;
+                    height: auto;
+                    padding: 1rem;
+                    padding-right: 0;
+                }
+                #artdirection {
+                    font-size: 1.8vh;
+                }
+                #losangeles {
+                    font-size: 1.8vh;
+                }
+            }
+            #designerdeveloper {
+                text-align: right;
+                position: absolute;
+                top: 8vw;
+                right: 54vw;
+                font-size: 2.5vh;
+            }
+        
+        }
+        #bottomsection {
+            bottom: 0;
+        }
+    }
+    #about {
+        #aboutbody {
+            #text {
+                padding-top: 3vh;
+                h2 {
+                    font-size: 3vh;
+                }
+                h4 {
+                    font-size: 2vh;
+                }
+            }
+        }
+    }
+    #contact {
+        #socials {
+            padding-top: 2vh;
+            height: 40vh;
+            position: relative;
+            #instagram {
+                width: 12vh;
+            }
+            #github {
+                width: 9vh;
+                position: absolute;
+                bottom: 6vh;
+                left: 11vh;
+            }
+            #spotify {
+                width: 9vh;
+                position: absolute;
+                bottom: 21vh;
+                left: 23vh;
+            }
+            #linkedin {
+                width: 7vh;
+                position: absolute;
+                bottom: 12vh;
+                left: 32vh;
+            }
+            img {
+                height: auto;
+            }
+        }
+    }
+    
+    #form {
+        font-family: 'Archivo Narrow', sans-serif;
+        text-transform: uppercase;
+        color: $darkmode;
+        height: 45vh;
+        .contact-form-text-area {
+            padding-top: 1rem;
+            padding-bottom: .5rem;
+            font-size: 3.2vh;
+            width: 100% !important;
+        }
+        input[type=submit] {
+            background: none;
+            border: none;
+            font-size: 4vh;
+        }
+    }
+    #resume {
+        #education h2 {
+            -webkit-text-fill-color: $darkmode;
+            -webkit-text-stroke-width: 0;
+        }
+        h2 {
+            color: $darkmode;
+            font-size: 3.5vh;
+        }
+        #experience, #tools {
+            h2 {
+                -webkit-text-fill-color: white;
+                -webkit-text-stroke-width: .15vh;
+                -webkit-text-stroke-color: $darkmode;
+            }
+        }
+        #experience {
+            #experiencecontent {
+                h5 {
+                    font-size: 1.5vh;
+                }
+                p {
+                    font-size: 1.2vh;
+                }
+            }
+        }
+        #siteportfolio {
+            h5, a {
+                font-size: 1.2vh;
+            }
+        }
+        #tools {
+            h5 {
+                font-size: 1.5vh;
+            }
+            ul {
+                font-size: 1.2vh;
+            }
+        }
+        #education {
+            h3 {
+                font-size: 2vh;
+            }
+            h4 {
+                font-size: 1.5vh;
+            }
+        }
+    }
+    #work {
+        #topsection {
+            height: 18vw;
+            #categories {
+                width: 70%;
+            }
+            .category {
+                font-size: 1.8vh;
+            }
+            padding-bottom: 13vh;
+        }
+        #bottomsection {
+            height: 78vh;
+            bottom: 0;
+            overflow: auto;
+            z-index: -2;
+            .work {
+                scroll-snap-align: start;
+                height: 78vh;
+                .description {
+                    padding-top: 2rem;
+                    h2 {
+                        font-size: 2.5vh;
+                    }
+                    h3 {
+                        font-size: 2vh;
+                    }
+                    p {
+                        font-size: 1.2vh;
+                    }
+                }
+                img {
+                    height: 64vh;
+                    width: 95%;
+                    object-fit: cover;
+                    bottom: 0;
+                }
+            }
+        }
     }
 }

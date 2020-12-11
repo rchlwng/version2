@@ -20,7 +20,12 @@
   </body>
   <script>
       function addDarkmodeWidget() {
-        new Darkmode().showWidget();
+
+        const options = {
+          autoMatchOsTheme: false 
+        }
+
+        new Darkmode().showWidget(options);
       }
       document.addEventListener("turbolinks:load", addDarkmodeWidget)
 </script>
