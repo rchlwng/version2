@@ -6,14 +6,19 @@
 $darkmode: #0D0D0D;
 $darkgray: #333333;
 $gray: #828282;
-
+$gradient: linear-gradient(90deg, rgba(255,46,33,1) 0%, rgba(9,9,121,1) 29%, rgba(113,23,76,1) 42%, rgba(237,39,22,1) 64%, rgba(238,44,23,1) 81%, rgba(251,100,40,1) 100%);
+$red: rgba(255,46,33,1);
 
 html {
     height: 100%;
 }
 
 body {
-    min-height: 100%;
+    min-height: 100%;	
+    cursor: image-url("cursors/cursor.png"), auto;
+    a {
+        cursor: image-url("cursors/select.png"), auto;
+    }
 }
 
 .body {
@@ -38,6 +43,27 @@ body {
             color: $darkmode;
             font-size: 2vw;
             padding-left: 4vw;
+            &:hover {
+                background: $gradient;
+                background-clip: text;
+                background-size: 300%;
+                -webkit-background-clip: text;
+                -moz-background-clip: text;
+                -webkit-text-fill-color: transparent; 
+                -moz-text-fill-color: transparent;
+                animation: shine 2s ease infinite;
+                @keyframes shine {
+                    0% {
+                        background-position: 0 50%;
+                    }
+                    50% {
+                        background-position: 100% 50%;
+                    }
+                    100% {
+                        background-position: 0 50%;
+                    }
+                }
+            }
         }
         padding: 2rem;
     }
@@ -79,12 +105,34 @@ body {
             width: 50vw;
         }
         .category {
+            cursor: image-url("cursors/select.png"), auto;
             background: none;
             border: none;
             font-family: 'Archivo Narrow', sans-serif;
             color: $darkmode;
             font-size: 1.8vw;
             text-align: left;
+            &:hover {
+                background: $gradient;
+                background-clip: text;
+                background-size: 300%;
+                -webkit-background-clip: text;
+                -moz-background-clip: text;
+                -webkit-text-fill-color: transparent; 
+                -moz-text-fill-color: transparent;
+                animation: shine 2s ease infinite;
+                @keyframes shine {
+                    0% {
+                        background-position: 0 50%;
+                    }
+                    50% {
+                        background-position: 100% 50%;
+                    }
+                    100% {
+                        background-position: 0 50%;
+                    }
+                }
+            }
         }
     }
     #bottomsection {
@@ -146,16 +194,84 @@ body {
 
 // RESUME STYLES
 #resume {
+    #pdf {
+            font-family: 'Archivo Narrow', sans-serif;
+            font-size: 1.5vw;
+            color: rgba(9,9,121,1);
+            &:hover {
+                background: $gradient;
+                background-clip: text;
+                background-size: 300%;
+                -webkit-background-clip: text;
+                -moz-background-clip: text;
+                -webkit-text-fill-color: transparent; 
+                -moz-text-fill-color: transparent;
+                animation: shine 2s ease infinite;
+                @keyframes shine {
+                    0% {
+                        background-position: 0 50%;
+                    }
+                    50% {
+                        background-position: 100% 50%;
+                    }
+                    100% {
+                        background-position: 0 50%;
+                    }
+                }
+            }
+        }
     h2 {
         font-family: 'Yeseva One', cursive;
         color: $darkmode;
         font-size: 4vw;
+        &:hover {
+            background: $gradient;
+            background-clip: text;
+            background-size: 300%;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -webkit-text-fill-color: transparent; 
+            -moz-text-fill-color: transparent;
+            animation: shine 2s ease infinite;
+            @keyframes shine {
+                0% {
+                    background-position: 0 50%;
+                }
+                50% {
+                    background-position: 100% 50%;
+                }
+                100% {
+                    background-position: 0 50%;
+                }
+            }
+        }
     }
     #experience, #education {
         h2 {
             -webkit-text-fill-color: white;
             -webkit-text-stroke-width: .15vw;
             -webkit-text-stroke-color: $darkmode;
+            &:hover {
+                background: $gradient;
+                background-clip: text;
+                background-size: 300%;
+                -webkit-background-clip: text;
+                -moz-background-clip: text;
+                -webkit-text-fill-color: transparent; 
+                -moz-text-fill-color: transparent;
+                animation: shine 2s ease infinite;
+                @keyframes shine {
+                    0% {
+                        background-position: 0 50%;
+                    }
+                    50% {
+                        background-position: 100% 50%;
+                    }
+                    100% {
+                        background-position: 0 50%;
+                    }
+                }
+            }
         }
     }
     #experience {
@@ -185,6 +301,27 @@ body {
             text-transform: uppercase;
             color: $gray;
             font-size: 1.2vw;
+            &:hover {
+                background: $gradient;
+                background-clip: text;
+                background-size: 300%;
+                -webkit-background-clip: text;
+                -moz-background-clip: text;
+                -webkit-text-fill-color: transparent; 
+                -moz-text-fill-color: transparent;
+                animation: shine 2s ease infinite;
+                @keyframes shine {
+                    0% {
+                        background-position: 0 50%;
+                    }
+                    50% {
+                        background-position: 100% 50%;
+                    }
+                    100% {
+                        background-position: 0 50%;
+                    }
+                }
+            }
         }
     }
     #tools {
@@ -268,6 +405,9 @@ body {
             &:focus {
                 outline: none;
             }
+            &::placeholder {
+                color: #DBDBDB;
+            }
         }
         .alert {
             padding-left: 0;
@@ -297,6 +437,27 @@ body {
         .nav-item, .nav-link {
             color: $darkmode;
             padding-right: 6vw;
+            &:hover {
+                background: $gradient;
+                background-clip: text;
+                background-size: 300%;
+                -webkit-background-clip: text;
+                -moz-background-clip: text;
+                -webkit-text-fill-color: transparent; 
+                -moz-text-fill-color: transparent;
+                animation: shine 2s ease infinite;
+                @keyframes shine {
+                    0% {
+                        background-position: 0 50%;
+                    }
+                    50% {
+                        background-position: 100% 50%;
+                    }
+                    100% {
+                        background-position: 0 50%;
+                    }
+                }
+            }
         }
         color: white;
         margin: 0;
@@ -333,6 +494,66 @@ body {
         position: absolute;
         bottom: 2vh;
         width: 80%;
+    }
+}
+
+// individual work styles 
+.casestudy {
+    .backbutton {
+        font-family: 'Archivo Narrow', sans-serif;
+        font-size: 1.5vw;
+        float: right;
+        border: none;
+    }
+    a {
+        color: $red;
+        &:hover {
+            background: $gradient;
+            background-clip: text;
+            background-size: 300%;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -webkit-text-fill-color: transparent; 
+            -moz-text-fill-color: transparent;
+            animation: shine 2s ease infinite;
+            @keyframes shine {
+                0% {
+                    background-position: 0 50%;
+                }
+                50% {
+                    background-position: 100% 50%;
+                }
+                100% {
+                    background-position: 0 50%;
+                }
+            }
+        }
+    }
+    #headline {
+        padding-left: 4rem;
+        h3 {
+            padding-left: 15vw;
+        }
+    }
+    .info {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        font-family: 'Archivo Narrow', sans-serif;
+        font-size: 1.5vw;
+    }
+    p {
+        font-family: 'Archivo Narrow', sans-serif;
+        font-size: 1.3vw;
+    }
+    h2 {
+        font-family: 'Yeseva One', cursive;
+        font-size: 2.3vw;
+    }
+}
+
+#fortunate {
+    #flipbook {
+        cursor: image-url("cursors/select.png"), auto;
     }
 }
 

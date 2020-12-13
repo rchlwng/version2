@@ -1,0 +1,19 @@
+<% provide(:title, "FULL STOP") %>
+<%= render 'layouts/navbar' %>
+<div id="fullstop" class="body casestudy">
+    <div id="headline">
+        <h1 class="fittext">FULL STOP</h1>
+        <h3>BRANDING DESIGN —</h3>
+    </div>
+    <div class="container info">
+        <p>Inspired by Episode 319: "It's Chinatown" of <%= link_to "99% Invisible", "https://99percentinvisible.org/" %>, an art and design podcast, FORTUNATE is a speculative women's fashion brand fusing elements of
+         my Asian-American experience from childhood to adulthood. The lookbook renders pieces from the pilot collection with emphasis on branding and typography, while
+         the case study fleshes out the ideation process and branding collateral.</p>
+    </div>
+    <div class="content">
+    </div>
+    <input type="button" class="backbutton" value="Back to Portfolio" onclick="history.back(-1)" class="my-5"/>
+</div>
+<script>
+    document.addEventListener("turbolinks:load", jQuery(".fittext").fitText())
+</script>

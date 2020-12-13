@@ -16,11 +16,11 @@
         <div id="form" class="col-lg-6">
             <%= form_for @contact, url: contact_path do |f| %>
                 <div class="container" id="contactform">
-                    <%= f.text_field  :name, required: true, class: "contact-form-text-area" %></br>
+                    <%= f.text_field  :name, placeholder: "NAME", required: true, class: "contact-form-text-area" %></br>
         
-                    <%= f.text_field :email, required: true, class: "contact-form-text-area" %></br>
+                    <%= f.text_field :email, placeholder: "EMAIL", required: true, class: "contact-form-text-area" %></br>
         
-                    <%= f.text_area :message, rows: 4, cols: 40, required: true, class: "contact-form-text-area" %>
+                    <%= f.text_area :message, rows: 4, cols: 40, placeholder: "MESSAGE", required: true, class: "contact-form-text-area" %>
                 <%= f.submit 'SEND' %>
                 <div class="pt-3" id="flash-message">
                     <%= render 'layouts/flash' %>

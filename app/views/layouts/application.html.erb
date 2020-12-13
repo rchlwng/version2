@@ -7,9 +7,8 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'jqueryfittext' %>
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/js/reveal.min.js" integrity="sha512-QYXU3Cojl94ZRiZRjUZpyg1odj9mKTON9MsTMzGNx/L3JqvMA3BQNraZwsZ83UeisO+QMVfFa83SyuYYJzR9hw==" crossorigin="anonymous"></script>
+    
     <%= render 'layouts/shim' %>
 
     <%= favicon_link_tag asset_path('favicon.ico') %>
@@ -17,5 +16,4 @@
   <body>
     <%= yield %>
   </body>
- 
 </html>
