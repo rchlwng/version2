@@ -10,6 +10,11 @@ require("channels")
 require("custom/jqueryfittext")
 require("custom/turn")
 
+require("reveal.js")
+import Reveal from "reveal.js"
+
+global.Reveal = Reveal
+
 import 'bootstrap'
 
 
