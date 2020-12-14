@@ -500,6 +500,7 @@ body {
 
 // MOBILE STYLES
 @media screen and (max-width: 992px) {
+    html, body { overflow-x: hidden; }
     .fittext {
         font-size: 18vw;
     }
