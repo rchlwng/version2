@@ -620,6 +620,7 @@ body {
         text-transform: uppercase;
         color: $darkmode;
         height: 45vh;
+        padding-right: 5rem;
         .contact-form-text-area {
             padding-top: 1rem;
             padding-bottom: .5rem;
@@ -633,6 +634,9 @@ body {
         }
     }
     #resume {
+        #pdf {
+            font-size: 1.5vh;
+        }
         #education h2 {
             -webkit-text-fill-color: $darkmode;
             -webkit-text-stroke-width: 0;
@@ -684,7 +688,7 @@ body {
         #topsection {
             height: 18vw;
             #categories {
-                width: 70%;
+                width: 90%;
             }
             .category {
                 font-size: 1.8vh;

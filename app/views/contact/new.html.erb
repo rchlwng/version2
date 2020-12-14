@@ -15,7 +15,7 @@
 
         <div id="form" class="col-lg-6">
             <%= form_for @contact, url: contact_path do |f| %>
-                <div class="container" id="contactform">
+                <div class="container-lg" id="contactform">
                     <%= f.text_field  :name, placeholder: "NAME", required: true, class: "contact-form-text-area" %></br>
         
                     <%= f.text_field :email, placeholder: "EMAIL", required: true, class: "contact-form-text-area" %></br>
