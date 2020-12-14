@@ -6,14 +6,76 @@
         <h3>BRANDING DESIGN —</h3>
     </div>
     <div class="container info">
-        <p>Inspired by Episode 319: "It's Chinatown" of <%= link_to "99% Invisible", "https://99percentinvisible.org/" %>, an art and design podcast, FORTUNATE is a speculative women's fashion brand fusing elements of
-         my Asian-American experience from childhood to adulthood. The lookbook renders pieces from the pilot collection with emphasis on branding and typography, while
-         the case study fleshes out the ideation process and branding collateral.</p>
+        <p>Christian Lacroix, iconic haute couture French fashion designer, has been perpetually synonymous with luxury, nonchalance, and splendor. 
+        Examined first through in-depth research, both the man and the brand have been rebranded in this case study to reflect a more apt aesthetic for modern day. My case study details the 
+        specifics of the rebranded identity, down to logo graphics, typefaces, and marketing collateral, while the background contextualizes Christian Lacroix in the sum total of his work.</p>
     </div>
     <div class="content">
+        <div class="container text-center">
+            <h2>CASE STUDY</h2>
+            <div class="reveal" id="casestudy">
+                <div class="slides">
+                        <section><%= image_tag("work/lacroix/casestudy/slide 1.png", alt: "rachie", class: "img-fluid") %></section>
+                        <section><%= image_tag("work/lacroix/casestudy/slide 2.png", alt: "rachie", class: "img-fluid") %></section>
+                        <section><%= image_tag("work/lacroix/casestudy/slide 3.png", alt: "rachie", class: "img-fluid") %></section>
+                        <section><%= image_tag("work/lacroix/casestudy/slide 4.png", alt: "rachie", class: "img-fluid") %></section>
+                        <section><%= image_tag("work/lacroix/casestudy/slide 5.png", alt: "rachie", class: "img-fluid") %></section>
+                        <section><%= image_tag("work/lacroix/casestudy/slide 6.png", alt: "rachie", class: "img-fluid") %></section>
+                        <section><%= image_tag("work/lacroix/casestudy/slide 7.png", alt: "rachie", class: "img-fluid") %></section>
+                        <section><%= image_tag("work/lacroix/casestudy/slide 8.png", alt: "rachie", class: "img-fluid") %></section>
+                        <section><%= image_tag("work/lacroix/casestudy/slide 9.png", alt: "rachie", class: "img-fluid") %></section>
+                        <section><%= image_tag("work/lacroix/casestudy/slide 10.png", alt: "rachie", class: "img-fluid") %></section>
+                        <section><%= image_tag("work/lacroix/casestudy/slide 11.png", alt: "rachie", class: "img-fluid") %></section>
+                        <section><%= image_tag("work/lacroix/casestudy/slide 12.png", alt: "rachie", class: "img-fluid") %></section>
+                        <section><%= image_tag("work/lacroix/casestudy/slide 13.png", alt: "rachie", class: "img-fluid") %></section>
+                        <section><%= image_tag("work/lacroix/casestudy/slide 14.png", alt: "rachie", class: "img-fluid") %></section>
+                        <section><%= image_tag("work/lacroix/casestudy/slide 15.png", alt: "rachie", class: "img-fluid") %></section>
+                        <section><%= image_tag("work/lacroix/casestudy/slide 16.png", alt: "rachie", class: "img-fluid") %></section>
+                        <section><%= image_tag("work/lacroix/casestudy/slide 17.png", alt: "rachie", class: "img-fluid") %></section>
+                </div>
+            </div>
+        </div>
+        <div class="container text-center py-5 mb-5">
+            <h2>BACKGROUND</h2>
+            <div class="reveal" id="background">
+                <div class="slides">
+                        <section><%= image_tag("work/lacroix/background/slide 1.png", alt: "rachie", class: "img-fluid") %></section>
+                        <section><%= image_tag("work/lacroix/background/slide 2.png", alt: "rachie", class: "img-fluid") %></section>
+                        <section><%= image_tag("work/lacroix/background/slide 3.png", alt: "rachie", class: "img-fluid") %></section>
+                        <section><%= image_tag("work/lacroix/background/slide 4.png", alt: "rachie", class: "img-fluid") %></section>
+                        <section><%= image_tag("work/lacroix/background/slide 5.png", alt: "rachie", class: "img-fluid") %></section>
+                        <section><%= image_tag("work/lacroix/background/slide 6.png", alt: "rachie", class: "img-fluid") %></section>
+                        <section><%= image_tag("work/lacroix/background/slide 7.png", alt: "rachie", class: "img-fluid") %></section>
+                        <section><%= image_tag("work/lacroix/background/slide 8.png", alt: "rachie", class: "img-fluid") %></section>
+                        <section><%= image_tag("work/lacroix/background/slide 9.png", alt: "rachie", class: "img-fluid") %></section>
+                        <section><%= image_tag("work/lacroix/background/slide 10.png", alt: "rachie", class: "img-fluid") %></section>
+                        <section><%= image_tag("work/lacroix/background/slide 11.png", alt: "rachie", class: "img-fluid") %></section>
+                        <section><%= image_tag("work/lacroix/background/slide 12.png", alt: "rachie", class: "img-fluid") %></section>
+                        <section><%= image_tag("work/lacroix/background/slide 13.png", alt: "rachie", class: "img-fluid") %></section>
+                        <section><%= image_tag("work/lacroix/background/slide 14.png", alt: "rachie", class: "img-fluid") %></section>
+                </div>
+            </div>
+        </div>
     </div>
     <input type="button" class="backbutton" value="Back to Portfolio" onclick="history.back(-1)" class="my-5"/>
 </div>
 <script>
     document.addEventListener("turbolinks:load", jQuery(".fittext").fitText())
+</script>
+<script>
+    let caseStudy = Reveal( document.querySelector( '#casestudy' ), {
+        backgroundTransition: 'slide',
+        touch: true,
+        embedded: true,
+        keyboardCondition: 'focused'
+    });
+    caseStudy.initialize();
+
+    let background = Reveal( document.querySelector( '#background' ), {
+        backgroundTransition: 'slide',
+        touch: true,
+        embedded: true,
+        keyboardCondition: 'focused'
+    });
+    background.initialize();
 </script>

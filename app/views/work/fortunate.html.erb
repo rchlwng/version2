@@ -6,28 +6,34 @@
         <h3>BRANDING DESIGN —</h3>
     </div>
     <div class="container info">
-        <p>Inspired by Episode 319: "It's Chinatown" of <%= link_to "99% Invisible", "https://99percentinvisible.org/" %>, an art and design podcast, FORTUNATE is a speculative women's fashion brand fusing elements of
-         my Asian-American experience from childhood to adulthood. The lookbook renders pieces from the pilot collection with emphasis on branding and typography, while
-         the case study fleshes out the ideation process and branding collateral.</p>
+    <p>Inspired by Episode 319: "It's Chinatown" of <%= link_to "99% Invisible", "https://99percentinvisible.org/" %>, an art and design podcast, FORTUNATE is a speculative women's fashion brand fusing elements of
+    my Asian-American experience from childhood to adulthood. The lookbook renders pieces from the pilot collection with emphasis on branding and typography, while
+    the case study fleshes out the ideation process and branding collateral.</p>
     </div>
     <div class="content">
-        <div class="text-center m-auto pb-5">
-                <div class="pb-5">
+        <div class="pb-5 text-center">
+                <div class="pb-5 text-center">
                 <h2>LOOKBOOK</h2>
                 <p>click to the right and left of the pages to navigate</p>
                 </div>
-                <div id="flipbook" class="m-auto">
-                    <div class="hard"><%= image_tag("work/fortunate/lookbook/page1.png", alt: "rachie") %></div>
-                    <div class="hard"><%= image_tag("work/fortunate/lookbook/page2.png", alt: "rachie") %></div>
-                    <div class="hard"><%= image_tag("work/fortunate/lookbook/page3.png", alt: "rachie") %></div>
-                    <div class="hard"><%= image_tag("work/fortunate/lookbook/page4.png", alt: "rachie") %></div>
-                    <div class="hard"><%= image_tag("work/fortunate/lookbook/page5.png", alt: "rachie") %></div>
-                    <div class="hard"><%= image_tag("work/fortunate/lookbook/page6.png", alt: "rachie") %></div>
-                    <div class="hard"><%= image_tag("work/fortunate/lookbook/page7.png", alt: "rachie") %></div>
-                    <div class="hard"><%= image_tag("work/fortunate/lookbook/page8.png", alt: "rachie") %></div>
+                <div class="wrapper">
+                <div class="aspect">
+                    <div class="aspect-inner">
+                        <div id="flipbook" class="flipbook">
+                        <div class="hard"><%= image_tag("work/fortunate/lookbook/page1.png", alt: "rachie") %></div>
+                        <div class="hard"><%= image_tag("work/fortunate/lookbook/page2.png", alt: "rachie") %></div>
+                        <div class="hard"><%= image_tag("work/fortunate/lookbook/page3.png", alt: "rachie") %></div>
+                        <div class="hard"><%= image_tag("work/fortunate/lookbook/page4.png", alt: "rachie") %></div>
+                        <div class="hard"><%= image_tag("work/fortunate/lookbook/page5.png", alt: "rachie") %></div>
+                        <div class="hard"><%= image_tag("work/fortunate/lookbook/page6.png", alt: "rachie") %></div>
+                        <div class="hard"><%= image_tag("work/fortunate/lookbook/page7.png", alt: "rachie") %></div>
+                        <div class="hard"><%= image_tag("work/fortunate/lookbook/page8.png", alt: "rachie") %></div>
+                        </div>
+                    </div>
+                </div>
                 </div>
         </div>
-        <div class="container text-center pt-5">
+        <div class="container text-center py-5 mb-5">
             <h2>CASE STUDY</h2>
             <div class="reveal">
                 <div class="slides">
@@ -56,10 +62,14 @@
 <script>
     document.addEventListener("turbolinks:load", jQuery(".fittext").fitText())
 
-    $("#flipbook").turn({
-		width: 1224,
-		height: 792,
-		autoCenter: true
+    var lookbook = document.getElementById('flipbook');
+        window.addEventListener('resize', function (e) {
+        lookbook.style.width = '';
+        lookbook.style.height = '';
+        $(lookbook).turn('size', lookbook.clientWidth, lookbook.clientHeight);
+    });
+    $(lookbook).turn({
+        autoCenter: true
     });
     
 </script>

@@ -2,5 +2,153 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+// TYPEFACES
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow&family=Yeseva+One&display=swap');
+
+// CUSTOM VARIABLES
+$darkmode: #0D0D0D;
+$darkgray: #333333;
+$gray: #828282;
+$gradient: linear-gradient(90deg, rgba(255,46,33,1) 0%, rgba(9,9,121,1) 29%, rgba(113,23,76,1) 42%, rgba(237,39,22,1) 64%, rgba(238,44,23,1) 81%, rgba(251,100,40,1) 100%);
+$red: rgba(255,46,33,1);
+$orange: #FF7518;
+
 @import 'reveal.js/dist/reveal';
-@import 'reveal.js/dist/theme/black';
+@import 'reveal.js/dist/theme/blood';
+
+
+// individual work styles 
+.casestudy {
+    .wrapper {
+        align-items: center;
+        display: flex;
+        height: 50%;
+        justify-content: center;
+        margin: auto;
+        width: 50%;
+    }
+    .aspect {
+        padding-bottom: 70%;
+        position: relative;
+        width: 100%;
+        .aspect-inner {
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+    .flipbook {
+        height: 100%;
+        transition: margin-left 0.25s ease-out;
+        width: 100%;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    .flipbook .page {
+        height: 100%;
+        width: 100%;
+    }
+    .flipbook .page img {
+        max-width: 100%;
+        height: 100%;
+    }
+    .backbutton {
+        font-family: 'Archivo Narrow', sans-serif;
+        font-size: 1.5vw;
+        float: right;
+        border: none;
+    }
+    a {
+        color: $red;
+        &:hover {
+            background: $gradient;
+            background-clip: text;
+            background-size: 300%;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -webkit-text-fill-color: transparent; 
+            -moz-text-fill-color: transparent;
+            animation: shine 2s ease infinite;
+            @keyframes shine {
+                0% {
+                    background-position: 0 50%;
+                }
+                50% {
+                    background-position: 100% 50%;
+                }
+                100% {
+                    background-position: 0 50%;
+                }
+            }
+        }
+    }
+    #headline {
+        padding-left: 4rem;
+        h3 {
+            padding-left: 15vw;
+        }
+    }
+    .info {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        font-family: 'Archivo Narrow', sans-serif;
+        font-size: 1.5vw;
+    }
+    .content {
+        p {
+            font-family: 'Archivo Narrow', sans-serif;
+            font-size: 1.3vw;
+        }
+        h2 {
+            font-family: 'Yeseva One', cursive;
+            font-size: 2.3vw;
+        }
+    }
+
+    #flipbook {
+        cursor: image-url("cursors/select.png"), auto;
+    }
+}
+
+
+.reveal {
+    height: 50rem;
+}
+
+@media screen and (max-width: 992px) {
+    .casestudy {
+        .info {
+            font-size: 1.5vh;
+            padding-top: 2rem;
+        }
+        .content {
+            p {
+                font-family: 'Archivo Narrow', sans-serif;
+                font-size: 1.3vh;
+            }
+            h2 {
+                font-family: 'Yeseva One', cursive;
+                font-size: 2.3vh;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .casestudy {
+        .wrapper {
+            align-items: center;
+            display: flex;
+            height: 90%;
+            justify-content: center;
+            margin: auto;
+            width: 90%;
+        }
+    }
+}
