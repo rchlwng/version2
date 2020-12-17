@@ -171,7 +171,7 @@ body {
             }
             img {
                 opacity: 1;
-                transition: opacity 1s;
+                transition: opacity .5s;
             }
             
             img[data-src] {
@@ -198,7 +198,7 @@ body {
         }
         img {
             opacity: 1;
-            transition: opacity 1s;
+            transition: opacity .5s;
         }
         img[data-src] {
             opacity: 0;
@@ -405,7 +405,7 @@ body {
         }
         img {
             opacity: 1;
-            transition: opacity 1s;
+            transition: opacity .5s;
         }
         img[data-src] {
             opacity: 0;
