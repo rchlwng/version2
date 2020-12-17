@@ -7,7 +7,7 @@
     </div>
     <div id="aboutbody" class="row">
         <div class="col-lg-5">
-        <%= image_tag("rachonfilm.png", alt: "rachie", id: "rachie", class: "img-fluid") %>
+        <%= image_tag("rachonfilm.png", data: { src: image_url("rachonfilm.png") }, alt: "rachie", id: "rachie", class: "img-fluid") %>
         </div>
         <div id="text" class="col-lg-7">
             <h2>I’m Rachel, a Los Angeles-based designer specializing in web, branding, and product.
@@ -18,5 +18,12 @@
     </div>
 </div>
 <script>
-    document.addEventListener("turbolinks:load", jQuery(".fittext").fitText())
+    document.addEventListener("turbolinks:load", jQuery(".fittext").fitText());
+
+    [].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
+	img.setAttribute('src', img.getAttribute('data-src'));
+	img.onload = function() {
+		img.removeAttribute('data-src');
+	};
+    });
 </script>

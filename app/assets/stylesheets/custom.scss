@@ -169,6 +169,14 @@ body {
                 width: 63vw;
                 object-fit: cover;
             }
+            img {
+                opacity: 1;
+                transition: opacity 1s;
+            }
+            
+            img[data-src] {
+                opacity: 0;
+            }
         }
     }
 }
@@ -188,7 +196,13 @@ body {
             color: $gray;
             font-size: 1.5vw;
         }
-        
+        img {
+            opacity: 1;
+            transition: opacity 1s;
+        }
+        img[data-src] {
+            opacity: 0;
+        }
     }
 }
 
@@ -389,6 +403,13 @@ body {
         img {
             height: auto;
         }
+        img {
+            opacity: 1;
+            transition: opacity 1s;
+        }
+        img[data-src] {
+            opacity: 0;
+        }
     }
     #form {
         font-family: 'Archivo Narrow', sans-serif;
@@ -416,6 +437,27 @@ body {
             background: none;
             border: none;
             font-size: 4vh;
+            &:hover {
+                background: $gradient;
+                background-clip: text;
+                background-size: 300%;
+                -webkit-background-clip: text;
+                -moz-background-clip: text;
+                -webkit-text-fill-color: transparent; 
+                -moz-text-fill-color: transparent;
+                animation: shine 2s ease infinite;
+                @keyframes shine {
+                    0% {
+                        background-position: 0 50%;
+                    }
+                    50% {
+                        background-position: 100% 50%;
+                    }
+                    100% {
+                        background-position: 0 50%;
+                    }
+                }
+            }
         }
     }
 }
@@ -495,6 +537,11 @@ body {
         bottom: 2vh;
         width: 80%;
     }
+}
+
+.navbar-toggler-icon {
+    width: 2.5em !important;
+    height: 2.5em !important;
 }
 
 
@@ -702,6 +749,7 @@ body {
             overflow: auto;
             z-index: -2;
             .work {
+                width: 97%;
                 scroll-snap-align: start;
                 height: 78vh;
                 .description {
@@ -718,7 +766,7 @@ body {
                 }
                 img {
                     height: 64vh;
-                    width: 95%;
+                    width: 100%;
                     object-fit: cover;
                     bottom: 0;
                 }

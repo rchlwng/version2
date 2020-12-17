@@ -16,9 +16,13 @@ $orange: #FF7518;
 @import 'reveal.js/dist/reveal';
 @import 'reveal.js/dist/theme/blood';
 
+body, html {
+    height: 100%;
+}
 
 // individual work styles 
 .casestudy {
+    min-height: 100%;
     .wrapper {
         align-items: center;
         display: flex;
@@ -61,8 +65,11 @@ $orange: #FF7518;
     .backbutton {
         font-family: 'Archivo Narrow', sans-serif;
         font-size: 1.5vw;
-        float: right;
+        position: fixed;
+        bottom: 0;
+        right: 0;
         border: none;
+        z-index: 1;
     }
     a {
         color: $red;
@@ -114,6 +121,10 @@ $orange: #FF7518;
     #flipbook {
         cursor: image-url("cursors/select.png"), auto;
     }
+
+    #navback {
+        cursor: image-url("cursors/select.png"), auto;
+    }
 }
 
 
@@ -136,6 +147,13 @@ $orange: #FF7518;
                 font-family: 'Yeseva One', cursive;
                 font-size: 2.3vh;
             }
+        }
+        .backbutton {
+            font-size: 1.5vh;
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            border: none;
         }
     }
     .reveal {

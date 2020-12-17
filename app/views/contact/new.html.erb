@@ -7,10 +7,10 @@
     </div>
     <div class="row">
         <div id="socials" class="col-lg-6">
-        <%= link_to image_tag("socials/instagram.png", alt: "instagram", id: "instagram"), "https://www.instagram.com/rachiebabywang/", target: :_blank, id: "logo", class: "navbar-brand" %>
-        <%= link_to image_tag("socials/github.png", alt: "github", id: "github"), "https://github.com/rchlwng", target: :_blank, id: "logo", class: "navbar-brand" %>
-        <%= link_to image_tag("socials/spotify.png", alt: "spotify", id: "spotify"), "https://open.spotify.com/user/1211390516?si=sUhgaPrLSu6hjImBmTSfNg", target: :_blank, id: "logo", class: "navbar-brand" %>
-        <%= link_to image_tag("socials/linkedin.png", alt: "linkedin", id: "linkedin"), "https://www.linkedin.com/in/rchlwang/", target: :_blank, id: "logo", class: "navbar-brand" %>
+        <%= link_to image_tag("socials/instagram.png", data: { src: image_url("socials/instagram.png") }, alt: "instagram", id: "instagram"), "https://www.instagram.com/rachiebabywang/", target: :_blank, id: "logo", class: "navbar-brand" %>
+        <%= link_to image_tag("socials/github.png", data: { src: image_url("socials/github.png") }, alt: "github", id: "github"), "https://github.com/rchlwng", target: :_blank, id: "logo", class: "navbar-brand" %>
+        <%= link_to image_tag("socials/spotify.png", data: { src: image_url("socials/spotify.png") }, alt: "spotify", id: "spotify"), "https://open.spotify.com/user/1211390516?si=sUhgaPrLSu6hjImBmTSfNg", target: :_blank, id: "logo", class: "navbar-brand" %>
+        <%= link_to image_tag("socials/linkedin.png", data: { src: image_url("socials/linkedin.png") }, alt: "linkedin", id: "linkedin"), "https://www.linkedin.com/in/rchlwang/", target: :_blank, id: "logo", class: "navbar-brand" %>
         </div>
 
         <div id="form" class="col-lg-6">
@@ -31,5 +31,12 @@
     </div>
 </div>
 <script>
-    document.addEventListener("turbolinks:load", jQuery(".fittext").fitText())
+    document.addEventListener("turbolinks:load", jQuery(".fittext").fitText());
+    
+    [].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
+	img.setAttribute('src', img.getAttribute('data-src'));
+	img.onload = function() {
+		img.removeAttribute('data-src');
+	};
+    });
 </script>
