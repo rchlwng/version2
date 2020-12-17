@@ -8,7 +8,7 @@ class ContactController < ApplicationController
       if @contact.valid?
         ContactMailer.with(contact: @contact).new.deliver_now
         redirect_to new_contact_url
-        flash[:notice] = "Thanks for contacting"
+        flash[:notice] = "Thanks for contacting!"
       else
         flash[:notice] = "Sorry, there was an error.  Please try again"
         render :new
